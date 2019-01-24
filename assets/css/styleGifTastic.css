@@ -1,0 +1,26 @@
+
+.gifTastic {
+    padding: 25px;
+    color: #777777;
+    background-color: #ffffff;
+    border-color: #dddddd;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    min-height: 500px;
+}
+
+.searchResults{
+    display: inline-block;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    margin: 10px;
+}
+
+.imageStatic, .imageGif {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
