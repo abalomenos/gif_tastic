@@ -317,6 +317,7 @@ table, th, td, tr {
     margin: 0 auto;
     color: black;
     background-color: blanchedalmond;
+    cursor: pointer;
 }
 
 /*---------- Portfolio Items End ----------*/
@@ -406,8 +407,7 @@ textarea {
     }
     60% {
         opacity: 0;
-        background: url("../images/skycomtechS.png");
-        background-repeat:no-repeat;
+        background: url("../images/skycomtechS.png") no-repeat;
         background-size: auto;
         image-rendering: auto;
         image-rendering: crisp-edges;
@@ -415,8 +415,7 @@ textarea {
     }
     80% {
         opacity: 0.5;
-        background: url("../images/skycomtechS.png");
-        background-repeat:no-repeat;
+        background: url("../images/skycomtechS.png") no-repeat;
         background-size: auto;
         image-rendering: auto;
         image-rendering: crisp-edges;
@@ -424,8 +423,7 @@ textarea {
     }
     100% {
         opacity: 1;
-        background: url("../images/skycomtechS.png");
-        background-repeat:no-repeat;
+        background: url("../images/skycomtechS.png") no-repeat;
         background-size: auto;
         image-rendering: auto;
         image-rendering: crisp-edges;
@@ -460,8 +458,7 @@ textarea {
     }
     60% {
         opacity: 0;
-        background: url("../images/skycomtechS.png");
-        background-repeat:no-repeat;
+        background: url("../images/skycomtechS.png") no-repeat;
         background-size: auto;
         image-rendering: auto;
         image-rendering: crisp-edges;
@@ -469,8 +466,7 @@ textarea {
     }
     80% {
         opacity: 0.5;
-        background: url("../images/skycomtechS.png");
-        background-repeat:no-repeat;
+        background: url("../images/skycomtechS.png") no-repeat;
         background-size: auto;
         image-rendering: auto;
         image-rendering: crisp-edges;
@@ -478,8 +474,7 @@ textarea {
     }
     100% {
         opacity: 1;
-        background: url("../images/skycomtechS.png");
-        background-repeat:no-repeat;
+        background: url("../images/skycomtechS.png") no-repeat;
         background-size: auto;
         image-rendering: auto;
         image-rendering: crisp-edges;
@@ -659,19 +654,19 @@ textarea {
         display: block;
         text-align: center;
         color: #dddddd;
-        background-color:rgba(65, 65, 65, 0.6);
+        background-color:rgba(31, 31, 31, 0.9);
         border-bottom: 2px solid #dddddd;
         border-top: 2px solid #dddddd;
     }
 
     .topnav.responsive a:hover {
         color: #CCAE1D;
-        background-color:rgba(0, 0, 0, 0.6);
+        background-color:rgba(0, 0, 0, 0.9);
     }
 
     .topnav.responsive a.active {
         color: #0AE5DF;
-        background-color:rgba(0, 0, 0, 0.8);
+        background-color:rgba(0, 0, 0, 0.9);
     }
 
     .topnav {

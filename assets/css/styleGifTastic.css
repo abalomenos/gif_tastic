@@ -29,7 +29,7 @@
     max-width: calc(100% - 40px);
 }
 
-.imageStatic, .imageGif {
+.imageStatic, .imageGif, .imageAddFavorite, .imageRemoveFavorite {
     cursor: pointer;
 }
 
