@@ -2,6 +2,7 @@
 // To be able to easily modify root directory
 var path = "./assets/";
 
+// Array of objects with hard-coded topics
 var topics = [
     {
         id : "0",
@@ -24,16 +25,24 @@ var topics = [
 // Offset counter for results
 var counter = 0;
 
+// Giphy API
 var api = "https://api.giphy.com/v1/gifs/search?";
 
+// API Key
 var apiKey = "api_key=rfocwg4M5WmFJjT4DndZP00ig3KmLTVw";
 
+// Initilalize result array
 var resultArray = [];
 
+// Initialize Topic for search
 var topicName = "";
 
-// initial default Rating
+var flag1 = 0;
+var flag2 = 0;
+
+// Initial default Rating
 var rating = "g";
+
 
 
 //********** Download **********
@@ -79,7 +88,7 @@ function initializeLocalStorage() {
         // Current ID
         var currentID = localStorage.getItem('currentID');
         currentID = currentID ? currentID : "";
-        // console.log(currentID);
+
         if (currentID == "") {
             localStorage.setItem('currentID', topics.length);
         }
@@ -124,6 +133,7 @@ function InitializeWindow() {
     
 }
 
+// Render Favorites
 function renderFavorites() {
     try {
         favoritesLS = JSON.parse(localStorage.getItem('favoritesLS'));
@@ -161,17 +171,18 @@ function renderFavorites() {
     }
 }
 
-function updateFavorites(favoriteID, favoriteName, flag){
+// Update changes to Favorites
+function updateFavorites(favoriteID, favoriteName, flag1){
     try {
         
         favoritesLS = JSON.parse(localStorage.getItem('favoritesLS'));
         
-        if (flag == 1) { // add a favorite
+        if (flag1 == 1) { // add a favorite
             if (favoritesLS.length == 0 || favoritesLS.findIndex(item => item.id == favoriteID) == -1) {
                 favoritesLS.push({"id" : favoriteID, "name" : favoriteName});
                 localStorage.setItem('favoritesLS', JSON.stringify(favoritesLS));
             }
-        } else if (flag == 2) { // remove a favorite
+        } else if (flag1 == 2) { // remove a favorite
             favoritesLS.splice(favoritesLS.findIndex(item => item.id == favoriteID),1);
             localStorage.setItem('favoritesLS', JSON.stringify(favoritesLS));
         }
@@ -183,6 +194,7 @@ function updateFavorites(favoriteID, favoriteName, flag){
     }
 }
 
+// Render Topics
 function renderTopics() {
     try {
         topicsLS = JSON.parse(localStorage.getItem('topicsLS'));
@@ -219,6 +231,7 @@ function renderTopics() {
     }
 }
 
+// Update changes to Topics
 function updateTopics(favoriteID, favoriteName, flag2) {
     try {    
         topicsLS = JSON.parse(localStorage.getItem('topicsLS'));
@@ -250,6 +263,7 @@ function updateTopics(favoriteID, favoriteName, flag2) {
     }
 }
 
+// Perform the actual Search using the Giphy API
 function topicSearch(topicName) {
 
     $(".resultsMessage").removeClass('animated zoomInDown');
@@ -427,6 +441,7 @@ $(document).on('click','.downloadGif', function() {
     return false;
 });
 
+// Everything starts here
 window.onload = function() {
     InitializeWindow();
 }
