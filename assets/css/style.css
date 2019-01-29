@@ -143,6 +143,10 @@ hr {
     border: 1px solid #dddddd;
 }
 
+button {
+    outline: 0px;
+}
+
 /*---------- Main Structure End ----------*/
 
 

@@ -40,18 +40,44 @@
             
         <div class="gifTastic">
                 
-            <h2>GifTastic Game</h2>
+            <h2>GIFTastic</h2>
             <hr>
-            <h4 class="box">GifTastic Game!</h4>
+            <h4>GIPHY Widget!</h4>
             <br>
             <div class="gameContainer">
-                <div id="topicButtons"></div>
-                <form id="topics">
-
-                        <input id="submit" type="submit" value="Submit">
+                <form>
+                    <h3>Max Rating</h3>
+                    <div class="radio-group">
+                        <input type="radio" id="G" name="rating" checked><label for="G">G</label><input type="radio" id="PG" name="rating"><label for="PG">PG</label><input type="radio" id="PG-13" name="rating"><label for="PG-13">PG-13</label><input type="radio" id="R" name="rating"><label for="R">R</label>
+                     </div>
+                </form>
+                <!-- <div id="topicButtons"></div> -->
+                <div class="container">
+                    <h3>Favorite Topics</h3>
+                    <div id="favoriteTopicMessage"><br><h5>Nothing in Favorites.</h5></div>
+                    <table id="favoriteButtons"></table>
+                </div>
+                <br>
+                <div class="container">
+                    <h3>Topics</h3>
+                    <div id="topicMessage"><br><h5>Try Searching for Additional Topics.</h5></div>
+                    <table id="topicButtons"></table>
+                </div>
+                <br>
+                <h3>Search Additional Topics</h3>
+                <form id="search">
+                        <input id="searchTopic" type="text">
+                        <!-- <input id="searchButton" type="button" value="Search"> -->
                 </form>
                 <br>
-                <div class="results"></div>
+                <div class="resultsMessage container">
+                    <h3>Click on the image to see the Gif aimation!</h3>
+                    <br>    
+                </div>
+                <div class="results container"></div>
+                <div class="moreResults container">
+                    <button class="moreResultsButton">More Results</button>
+                </div>
             </div>
         </div>
     </section>
